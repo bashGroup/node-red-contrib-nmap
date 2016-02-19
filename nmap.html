@@ -1,0 +1,35 @@
+<script type="text/javascript">
+  RED.nodes.registerType("nmap", {
+    category: "function",
+    color: "#83B3B3",
+    defaults: {
+      name: {value:"", required: false},
+      target: {value:"192.168.0.0/24", required: true},
+      scantype: {value:"", required: true}
+    },
+    inputs:1,
+    outputs:1,
+    icon: "nmap.png",
+    label: function() {
+      return this.name ? this.name : "nmap scanner";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="nmap">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-bookmark"></i>Name</label>
+        <input type="text" id="node-input-name" />
+    </div>
+    <div class="form-row">
+        <label for="node-input-target"><i class="icon-bookmark"></i>Target</label>
+        <input type="text" id="node-input-target" />
+    </div>
+    <div class="form-row">
+        <label for="node-input-scantype"><i class="icon-bookmark"></i>Scan Type</label>
+        <select id="node-input-scantype" style="width:125px !important">
+            <option value="QuickScan">QuickScan</option>
+            <option value="OsAndPortScan (root only)">OsAndPortScan</option>
+        </select>
+    </div>
+</script>

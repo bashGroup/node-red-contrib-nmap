@@ -1,0 +1,26 @@
+{
+"name" : "node-red-contrib-nmap",
+"version" : "0.0.1",
+"description" : "Node-RED node to scan your network",
+"dependencies": {
+	"node-nmap": "3.0.1"
+},
+"engines":
+{
+	"node": ">=5.0.0"
+},
+"repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/bashgroup/node-red-contrib-nmap.git"
+},
+"license": "MIT",
+"keywords": [ "node-red", "nmap", "scan", "wifi"],
+"node-red" : {
+"nodes": {
+"nmap": "nmap.js"
+}
+},
+"author": {
+"name": "bashGroup Lohr am Main"
+}
+}
